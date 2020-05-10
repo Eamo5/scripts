@@ -30,7 +30,7 @@ case "$1" in
 	aosip)
 		lunch aosip_"$2"-user
 		m installclean
-		time m kronic ;;
+		m kronic ;;
 	aicp)
 		breakfast aicp_"$2"-userdebug
 		m installclean
