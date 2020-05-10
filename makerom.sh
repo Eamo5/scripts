@@ -25,21 +25,21 @@ echo "Starting build..."
 case "$1" in
 	lineage17)
 		breakfast lineage_"$2"-userdebug
-		mka installclean
+		m installclean
 		brunch lineage_"$2"-userdebug ;;
 	aosip)
 		lunch aosip_"$2"-user
-		mka installclean
-		time mka kronic ;;
+		m installclean
+		time m kronic ;;
 	aicp)
 		breakfast aicp_"$2"-userdebug
-		mka installclean
+		m installclean
 		brunch aicp_"$2"-userdebug ;;
 esac
 
 ## Build Signing
 if [ "$1" == "lineage17" ]; then
-	mka target-files-package otatools
+	m target-files-package otatools
 
 	# Sign APKs
 	echo "Signing APKs..."
