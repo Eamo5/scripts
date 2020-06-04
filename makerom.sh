@@ -11,7 +11,7 @@ cd "$ROM_DIR"
 source "$ROM_DIR/build/envsetup.sh"
 
 # when signing builds, /tmp being too small can be problematic
-sudo mount -o remount,exec,size=15G /tmp
+sudo mount -o remount,size=15G /tmp
 
 ## Sync
 if [ "$3" == "sync" ] && [ "$4" == "" ]; then
