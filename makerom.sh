@@ -52,6 +52,9 @@ if [ "$1" == "lineage17" ]; then
 	    --block \
 	    signed-target_files.zip \
 	    signed-ota_update.zip
+
+	# Move target package to $OUT
+	mv signed-ota_update.zip $OUT/lineage-17.1-UNOFFICIAL-"$2".zip
 fi
 
 echo "Done!"
