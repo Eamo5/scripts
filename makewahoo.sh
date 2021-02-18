@@ -1,7 +1,7 @@
 #!/bin/bash
 ## Wahoo Kernel Build Script by @Eamo5
 # Syntax - ./makewahoo.sh (branch) (gcc-version) (clean) (date)
-# eg. ./makewahoo.sh sultan-r gcc-10.1 clean dd-mm-yy
+# eg. ./makewahoo.sh sultan-r gcc-10.2 clean dd-mm-yy
 # If no parameters are passed, the script defaults to the current branch with GCC 9.3
 
 ## Variables
@@ -26,7 +26,7 @@ export ARCH=arm64 SUBARCH=arm64 KBUILD_BUILD_USER=Eamo5 KBUILD_BUILD_HOST=HotBox
 
 # Check for specified GCC parameters. If no valid argument passed, use GCC 9.3 by default.
 case $2 in
-	gcc-10.1)
+	gcc-10.2)
 		# Arch Linux Packages (aarch64-linux-gnu-gcc & arm-none-eabi-gcc)
 		# https://git.archlinux.org/svntogit/community.git/plain/trunk/PKGBUILD?h=packages/aarch64-linux-gnu-gcc
 		export CROSS_COMPILE="ccache aarch64-linux-gnu-" CROSS_COMPILE_ARM32="ccache arm-none-eabi-" ;;
